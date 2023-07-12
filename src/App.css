@@ -37,7 +37,14 @@
   }
 }
 
+* {
+  margin: 0 auto;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
 .dropdown__box {
-  display: flex;
-  justify-content: flex-end;
+  width: 100%;
+  position: relative;
 }

@@ -8,6 +8,9 @@ export const DropdownContainer = styled.div`
   flex-direction: column;
   justify-content: center;
 
+  position: absolute;
+  right: 0;
+
   #box {
     display: flex;
     align-items: center;

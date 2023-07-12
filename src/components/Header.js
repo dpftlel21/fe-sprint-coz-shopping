@@ -7,10 +7,14 @@ import { useState } from "react";
 import "../App.css";
 
 export const HeaderContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
   width: 100%;
+  height: 80px;
   box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.1);
 
   header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
