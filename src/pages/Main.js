@@ -3,6 +3,7 @@ import BookmarkLists from "../components/BookmarkLists";
 import RenderItem from "../components/RenderItem";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Modal from "../components/Modal";
 
 export const MainContainer = styled.div`
   width: 100%;
@@ -33,6 +34,7 @@ export const MainContainer = styled.div`
 
 function Main() {
   const [products, setProducts] = useState([]);
+  const [selectedProductId, setSelectedProductId] = useState(null);
 
   useEffect(() => {
     axios
@@ -52,7 +54,8 @@ function Main() {
         <div className="list_box">
           <h1>상품 리스트</h1>
             <div className="render_item">
-            <RenderItem products={products}/>
+            <RenderItem products={products} setSelectedProductId={setSelectedProductId}/>
+            <Modal products={products} setSelectedProductId={setSelectedProductId} selectedProductId={selectedProductId}/>
             </div>
         </div>
         <div className="list_box">

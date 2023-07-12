@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-
 export const ItemInfo = styled.div`
     width: 300px;
     margin: 0;
@@ -22,8 +21,6 @@ export const ItemInfo = styled.div`
         margin: 0;
     }
 
-
-
     .price {
         font-size: 1.2rem;
         font-weight: 600;
@@ -34,15 +31,19 @@ export const ItemInfo = styled.div`
 `;
 
 
-function RenderItem({ products }) {
+function RenderItem({ products, setSelectedProductId }) {
   let renderedItems = [];
+
+  const openModal = (productId) => {
+    setSelectedProductId(productId);
+    };
   
   if (products.length > 0) {
     for (let i = 0; i < products.length; i++) {
       if (products[i].type === "Brand") {
         renderedItems.push(
           <ItemInfo key={products[i].id}>
-            <img src={products[i].brand_image_url} alt="img"  />
+            <img onClick={() => openModal(products[i].id)} src={products[i].brand_image_url} alt="img"  />
             <h3>{products[i].brand_name}</h3>
             <p>{products[i].follower}</p>
           </ItemInfo>
