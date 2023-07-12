@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 export const DropdownContainer = styled.div`
-  width: 200px;
-  height: 172px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: white;
+  margin-right: 20px;
 
   position: absolute;
   right: 0;
