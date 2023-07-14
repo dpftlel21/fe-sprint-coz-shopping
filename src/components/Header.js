@@ -21,7 +21,7 @@ export const HeaderContainer = styled.div`
     align-items: center;
   }
 
-  .nav__left {
+  .nav_left {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,7 +35,7 @@ export const HeaderContainer = styled.div`
     margin-right: 12px;
   }
 
-  .nav__right {
+  .nav_right {
     margin-right: 5rem;
   }
 
@@ -56,18 +56,18 @@ function Header() {
     <>
       <HeaderContainer>
         <header>
-          <div className="nav__left">
+          <div className="nav_left">
             <img className="logo" src={Logo} alt="logo" />
             <h1 className="title"><Link to = "/" style={{textDecoration:"none", color: "black"}}><span>Coz Shopping</span></Link></h1>
           </div>
-          <div className="nav__right">
+          <div className="nav_right">
             <button onClick={toggleDropdown}>
               <img className="hamburger" src={hamburger} alt="hamburger" />
             </button>
           </div>
         </header>
       </HeaderContainer>
-      <div className="dropdown__box">{isDropdown ? <Dropdown /> : null}</div>
+      <div className="dropdown_box">{isDropdown ? <Dropdown /> : null}</div>
     </>
   );
 }
