@@ -1,5 +1,5 @@
 import React from "react";
-import { ItemInfo } from "./RenderItem";
+import { ItemInfo } from "./styles/RenderItemStyle";
 
 
 function RenderBookmarks({ bookmarks, products, setSelectedProductId, selectedProductId }) {

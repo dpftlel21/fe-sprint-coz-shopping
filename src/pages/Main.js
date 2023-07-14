@@ -1,36 +1,11 @@
-import styled from "styled-components";
 import RenderItem from "../components/RenderItem";
 import RenderBookmarks from "../components/RenderBookmarks";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Modal from "../components/Modal";
+import { MainContainer } from "../components/styles/MainsStyle";
 
-export const MainContainer = styled.div`
-  width: 100%;
-  height: 750px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 
-  .list_box {
-    width: 90%;
-    height: 330px;
-    margin: 20px 20px;
-  }
-
-  .render_item {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-  }
-
-  h1 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-  }
-`;
 
 function Main() {
   const [products, setProducts] = useState([]);
