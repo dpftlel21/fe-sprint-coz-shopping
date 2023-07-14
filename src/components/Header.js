@@ -4,6 +4,7 @@ import hamburger from "../img/hamburger.png";
 import styled from "styled-components";
 import Dropdown from "./Dropdown";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "../App.css";
 
 export const HeaderContainer = styled.div`
@@ -57,7 +58,7 @@ function Header() {
         <header>
           <div className="nav__left">
             <img className="logo" src={Logo} alt="logo" />
-            <h1 className="title">Coz Shopping</h1>
+            <h1 className="title"><Link to = "/" style={{textDecoration:"none", color: "black"}}><span>Coz Shopping</span></Link></h1>
           </div>
           <div className="nav__right">
             <button onClick={toggleDropdown}>

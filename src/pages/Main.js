@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import BookmarkLists from "../components/BookmarkLists";
 import RenderItem from "../components/RenderItem";
+import RenderBookmarks from "../components/RenderBookmarks";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Modal from "../components/Modal";
@@ -34,6 +34,8 @@ export const MainContainer = styled.div`
 
 function Main() {
   const [products, setProducts] = useState([]);
+  const [bookmarks, setBookmarks] = useState([]);
+
   const [selectedProductId, setSelectedProductId] = useState(null);
 
   useEffect(() => {
@@ -42,6 +44,7 @@ function Main() {
       .then((res) => {
         console.log(res.data);
         setProducts(res.data);
+        setBookmarks(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -54,13 +57,15 @@ function Main() {
         <div className="list_box">
           <h1>상품 리스트</h1>
             <div className="render_item">
-            <RenderItem products={products} setSelectedProductId={setSelectedProductId}/>
+            <RenderItem products={products} setSelectedProductId={setSelectedProductId} selectedProductId={selectedProductId}/>
             <Modal products={products} setSelectedProductId={setSelectedProductId} selectedProductId={selectedProductId}/>
             </div>
         </div>
         <div className="list_box">
           <h1>북마크 리스트</h1>
-          <BookmarkLists />
+          <div className="render_item">
+          <RenderBookmarks bookmarks={bookmarks} setBookmarks={setBookmarks} selectedProductId={selectedProductId}/>
+          </div>
         </div>
       </MainContainer>
     </>
