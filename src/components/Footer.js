@@ -11,7 +11,7 @@ export const FooterContainer = styled.div`
   box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.1);
   border-top: 1px solid #e5e5e5;
 
-  .font {
+  .footer_font {
     font-family: "Inter";
     font-style: normal;
     font-weight: 400;
@@ -25,8 +25,8 @@ export const FooterContainer = styled.div`
 function Footer() {
   return (
     <FooterContainer>
-      <div className="font">개인정보 처리방침 | 이용 약관</div>
-      <div className="font">All rigths reserved @ Codestates</div>
+      <div className="footer_font">개인정보 처리방침 | 이용 약관</div>
+      <div className="footer_font">All rigths reserved @ Codestates</div>
     </FooterContainer>
   );
 }

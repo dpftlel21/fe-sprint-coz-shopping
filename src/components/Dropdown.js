@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const DropdownContainer = styled.div`
@@ -29,8 +30,8 @@ function Dropdown() {
   return (
     <DropdownContainer>
       <div id="box">OOO님, 안녕하세요!</div>
-      <div id="box">🎁 상품리스트 페이지</div>
-      <div id="box">⭐️ 북마크 페이지</div>
+      <div id="box"><Link to="/ProductList" style={{ textDecoration:"none", color: "black"}}>🎁 상품리스트 페이지</Link></div>
+      <div id="box"><Link to="/Bookmark" style={{ textDecoration:"none", color: "black"}}>⭐️ 북마크 페이지</Link></div>
     </DropdownContainer>
   );
 }
