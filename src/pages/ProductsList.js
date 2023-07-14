@@ -6,11 +6,13 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import Modal from "../components/Modal";
+import Filtering from "../components/Filtering";
 
 function ProductsLists() {
 
   const [products, setProducts] = useState([]);
   const [selectedProductId, setSelectedProductId] = useState(null);
+  const [buttonType, setButtonType] = useState('All');
   const { ref, inView } = useInView({
     threshold: 0
   });
@@ -30,9 +32,9 @@ function ProductsLists() {
 
   return (
     <>  
-        <NavButton />
+        <NavButton buttonType={buttonType} products={products} setButtonType={setButtonType} />
         <ProductsListsContainer ref={ref} >
-          <RenderItem products={products} inView={inView} setSelectedProductId={setSelectedProductId} selectedProductId={selectedProductId}/>
+          <Filtering buttonType={buttonType} products={products} setSelectedProductId={setSelectedProductId}/>
           <Modal products={products} setSelectedProductId={setSelectedProductId} selectedProductId={selectedProductId}/>
         </ProductsListsContainer>
     </>
