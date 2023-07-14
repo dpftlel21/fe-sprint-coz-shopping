@@ -22,8 +22,8 @@ export const NavButtonContainer = styled.div`
 
     button:hover {
         position: relative;
-        top: 3px;
-        left: 3px;
+        top: 4px;
+        left: 4px;
     }
 
 `;  
