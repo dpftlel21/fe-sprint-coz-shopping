@@ -2,8 +2,10 @@ import styled from 'styled-components';
 
 export const NavButtonContainer = styled.div`
     width: 100%;
-    height: 80px;
-
+    height: 185px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .nav_button {
         width: 500px;

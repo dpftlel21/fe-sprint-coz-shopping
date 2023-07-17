@@ -1,10 +1,8 @@
 import React from "react";
 import  NavButton  from "../components/NavButton";
 import { ProductsListsContainer } from "../components/styles/ProductsListsStyle";
-import RenderItem from "../components/RenderItem";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useInView } from "react-intersection-observer";
 import Modal from "../components/Modal";
 import Filtering from "../components/Filtering";
 
@@ -13,9 +11,6 @@ function ProductsLists() {
   const [products, setProducts] = useState([]);
   const [selectedProductId, setSelectedProductId] = useState(null);
   const [buttonType, setButtonType] = useState('All');
-  const { ref, inView } = useInView({
-    threshold: 0
-  });
 
   useEffect(() => {
     axios
@@ -33,10 +28,12 @@ function ProductsLists() {
   return (
     <>  
         <NavButton buttonType={buttonType} products={products} setButtonType={setButtonType} />
-        <ProductsListsContainer ref={ref} >
-          <Filtering buttonType={buttonType} products={products} setSelectedProductId={setSelectedProductId}/>
-          <Modal products={products} setSelectedProductId={setSelectedProductId} selectedProductId={selectedProductId}/>
-        </ProductsListsContainer>
+          <ProductsListsContainer >
+            <div className="list_container">
+              <Filtering buttonType={buttonType} products={products} setSelectedProductId={setSelectedProductId}/>
+            </div>
+            <Modal products={products} setSelectedProductId={setSelectedProductId} selectedProductId={selectedProductId}/>
+          </ProductsListsContainer>
     </>
   );
 }

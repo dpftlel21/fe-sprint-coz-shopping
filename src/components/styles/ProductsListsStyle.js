@@ -1,12 +1,17 @@
 import styled from "styled-components";
 
 export const ProductsListsContainer = styled.div`
-  width: 80%;
-  height: 615px;
-  margin-top: 50px;
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  overflow-y: scroll;
+  margin-top: 20px;
+
+  .list_container {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
 `;

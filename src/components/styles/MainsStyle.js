@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const MainContainer = styled.div`
   width: 100%;
-  height: 750px;
+  height: 900px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,18 +11,17 @@ export const MainContainer = styled.div`
   .list_box {
     width: 90%;
     height: 330px;
-    margin: 20px 20px;
+    margin-bottom: 20px;
   }
 
   .render_item {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin: 0;
   }
 
   h1 {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     margin-bottom: 10px;
   }
 `;
