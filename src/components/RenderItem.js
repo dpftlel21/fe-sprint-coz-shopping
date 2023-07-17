@@ -19,9 +19,11 @@ function RenderItem({ products, setSelectedProductId, selectedProductId }) {
         return (
           <ItemInfo key={product.id}>
             <img src={product.brand_image_url} onClick={() => openModal(product.id)} alt="브랜드 이미지"/>
+              <div className="follower">
               <h3>{product.brand_name}</h3>
               <p>관심고객수</p>
-              <p>{product.follower}</p>
+              </div>
+              <p className="follower_font">{product.follower}</p>
           </ItemInfo>
         )}
 

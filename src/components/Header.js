@@ -11,7 +11,7 @@ import {HeaderContainer} from "./styles/HeaderStyle";
 function Header() {
   const [isDropdown, setIsDropdown] = useState(false);
   const toggleDropdown = () => {
-    isDropdown ? setIsDropdown(false) : setIsDropdown(true);
+    setIsDropdown(!isDropdown);
   };
 
   return (

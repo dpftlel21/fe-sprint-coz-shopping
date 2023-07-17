@@ -3,12 +3,14 @@ import styled from "styled-components";
 export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
-  height: 80px;
+  height: 120px;
   box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.1);
 
   header {
     width: 100%;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,5 +38,10 @@ export const HeaderContainer = styled.div`
     border: none;
     background-color: white;
     cursor: pointer;
+  }
+
+  .dropdown__box {
+    width: 100%;
+    position: relative;
   }
 `;

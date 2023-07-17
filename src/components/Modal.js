@@ -16,8 +16,8 @@ function Modal({ products, selectedProductId, setSelectedProductId }) {
       <ModalContainer>
         {selectedProduct && (
           <ModalBackground onClick={closeModal}>
-            <ModalContent onClick={(event) => { closeModal(); event.stopPropagation(); }}>
-              <img src={selectedProduct.image_url || selectedProduct.brand_image_url}alt={`Selected Product ${selectedProduct.id}`}/>
+            <ModalContent>
+              <img src={selectedProduct.image_url || selectedProduct.brand_image_url} alt="상품"/>
             </ModalContent>
           </ModalBackground>
         )}

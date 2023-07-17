@@ -39,7 +39,8 @@ function Main() {
         <div className="list_box">
           <h1>북마크 리스트</h1>
           <div className="render_item">
-          <RenderBookmarks bookmarks={bookmarks} setBookmarks={setBookmarks} selectedProductId={selectedProductId}/>
+          <RenderBookmarks bookmarks={bookmarks} setBookmarks={setBookmarks} setSelectedProductId={setSelectedProductId} selectedProductId={selectedProductId}/>
+          <Modal products={products} setSelectedProductId={setSelectedProductId} selectedProductId={selectedProductId}/>
           </div>
         </div>
       </MainContainer>

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const DropdownContainer = styled.div`
+  width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,11 +14,11 @@ export const DropdownContainer = styled.div`
   right: 0;
 
   #box {
+    width: 300px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 12rem;
-    height: 3rem;
     flex: none;
     order: 1;
     flex-grow: 0;

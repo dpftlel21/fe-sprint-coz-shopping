@@ -4,16 +4,19 @@ import Footer from "./components/Footer";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import ProductsList from "./pages/ProductsList";
+import { GlobalStyle } from "./components/styles/GlobalStyle";
 
 function App() {
   return (
     <>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/ProductList" element = {<ProductsList/>} />
-      </Routes>
-      <Footer />
+      <GlobalStyle>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/ProductList" element={<ProductsList />} />
+        </Routes>
+        <Footer />
+      </GlobalStyle>
     </>
   );
 }
